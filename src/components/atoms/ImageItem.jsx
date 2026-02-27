@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function ImageItem({
+  id,
   src,
   alt,
   category,
@@ -9,26 +10,31 @@ export default function ImageItem({
   size = 140,
 }) {
   return (
-    <div className="bg-white border border-white/30 rounded-xl overflow-hidden shadow-sm transition-shadow duration-300 flex flex-row hover:translate-y-[-3px] shadow-gray-800 hover:shadow-[0_0_35px_rgba(0,0,0,0.25)] max-w-2xl">
-      {/* Imagen a la izquierda */}
+    <div
+      className="bg-white border border-white/30 rounded-xl overflow-hidden shadow-sm transition-shadow duration-300 flex flex-col md:flex-row hover:translate-y-[-3px] shadow-gray-800 hover:shadow-[0_0_35px_rgba(0,0,0,0.25)] max-w-2xl md:max-w-4xl mx-auto h-full min-h-0"
+      style={{ minHeight: size + 32, height: '100%' }}
+    >
+      {/* Imagen */}
       <div
-        className="flex items-center justify-center bg-gray-800"
-        style={{ width: size, minWidth: size, height: size }}
+        className="flex items-center justify-center w-full md:w-auto h-full min-h-0"
+        style={{ width: size, minWidth: size, height: '100%', alignSelf: 'stretch', padding: 0, background: 'linear-gradient(180deg, #23272f 0%, #181a20 100%)' }}
       >
         <Image
           src={src}
           alt={alt}
           width={size}
           height={size}
-          className="object-contain rounded-lg"
+          className="object-cover w-full h-full rounded-lg"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </div>
-      {/* Información a la derecha */}
-      <div className="p-4 flex-1 flex flex-col bg-gray-700 text-white justify-center">
-        <h3 className="font-semibold text-lg mb-2 text-left text-white">
+      {/* Información */}
+      <div className="p-6 flex-1 flex flex-col bg-gray-700 text-white justify-center items-center md:items-start">
+        <h3 className="font-semibold text-2xl mb-2 text-center md:text-left text-white">
           {alt}
         </h3>
-        <div className="text-sm mb-1">
+        <div className="text-xs text-gray-400 mb-2 text-center md:text-left">ID: {id}</div>
+        <div className="text-sm mb-2 w-full">
           <span className="block">
             <strong>Tipo:</strong> {category || "Desconocido"}
           </span>
@@ -36,10 +42,10 @@ export default function ImageItem({
             <strong>Vaso:</strong> {glass || "Desconocido"}
           </span>
         </div>
-        <div className="text-sm mb-1">
+        <div className="text-sm mb-2 w-full">
           <strong>Ingredientes:</strong>
         </div>
-        <div className="flex flex-wrap items-center gap-2 text-xs">
+        <div className="flex flex-wrap items-center gap-2 text-xs w-full">
           {ingredients.map((ing, i) => (
             <span
               key={i}
