@@ -22,9 +22,9 @@ export default function GaleriaPage() {
         >
           Galería de Imágenes
         </h1>
-        <p className="text-3xl font-semibold  mb-2 text-center">
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-5xl px-4 text-gray-200 leading-relaxed">
           Explora nuestra selección de cocteles cuidadosamente seleccionados,
-          <b /> cada uno con su propia historia y sabor único. Desde los
+          <br /> cada uno con su propia historia y sabor único. Desde los
           clásicos atemporales hasta las creaciones más innovadoras, nuestra
           galería de imágenes te invita a descubrir la belleza y la diversidad
           del mundo de los cocteles. ¡Sumérgete en esta experiencia visual y

@@ -12,7 +12,7 @@ export default function Home() {
       >
         Bienvenido a la Galeria de Cocteles
       </h1>
-      <p className="text-3xl font-semibold  mb-2 text-center">
+      <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-4xl px-4 text-gray-200">
         Explora una colección de cocteles increíbles y descubre nuevas recetas
         para mejorar tu experiencia en la barra
         <br /> Navega por nuestras categorías y encuentra la aplicación perfecta
@@ -24,8 +24,8 @@ export default function Home() {
       >
         Ir a la Galería de Cocteles
       </Link>
-      <p className="text-3xl font-semibold  mt-4 text-center">
-        ¡Sumérgete en el mundo de los cocteles y encuentra tu próxima mezcla
+      <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-8 text-center max-w-4xl px-4 text-gray-200">
+        ¡Sumérgenete en el mundo de los cocteles y encuentra tu próxima mezcla
         favorita!
       </p>
     </div>
