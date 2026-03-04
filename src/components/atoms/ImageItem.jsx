@@ -9,9 +9,9 @@ export default function ImageItem({
   ingredients = [],
 }) {
   return (
-    <div className="bg-gray-800 border border-gray-700 hover:border-gray-500 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col hover:-translate-y-1 h-full w-full mx-auto group">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col hover:-translate-y-1 h-full w-full mx-auto group">
       {/* Imagen */}
-      <div className="w-full aspect-square relative bg-gradient-to-b from-[#23272f] to-[#181a20] overflow-hidden">
+      <div className="w-full aspect-square relative bg-gradient-to-b from-gray-100 to-gray-200 dark:from-[#23272f] dark:to-[#181a20] overflow-hidden">
         <Image
           src={src}
           alt={alt}
@@ -21,45 +21,45 @@ export default function ImageItem({
         />
       </div>
       {/* Información */}
-      <div className="p-5 flex-1 flex flex-col bg-gray-800 text-white">
-        <h3 className="font-semibold text-xl mb-1 text-white line-clamp-1">
+      <div className="p-5 flex-1 flex flex-col bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+        <h3 className="font-semibold text-xl mb-1 text-gray-900 dark:text-white line-clamp-1">
           {alt}
         </h3>
-        <div className="text-xs text-gray-400 mb-4 font-mono">ID: {id}</div>
-        <div className="text-sm mb-3 space-y-1 text-gray-300 flex-1">
-          <p className="flex justify-between border-b border-gray-700 pb-1">
-            <span className="text-gray-400">Tipo</span>
+        <div className="text-xs text-gray-500 dark:text-gray-400 mb-4 font-mono">ID: {id}</div>
+        <div className="text-sm mb-3 space-y-1 text-gray-700 dark:text-gray-300 flex-1">
+          <p className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-1">
+            <span className="text-gray-500 dark:text-gray-400">Tipo</span>
             <span className="font-medium text-right text-sm">
               {category || "Desconocido"}
             </span>
           </p>
-          <p className="flex justify-between border-b border-gray-700 pb-1 pt-1">
-            <span className="text-gray-400">Vaso</span>
+          <p className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-1 pt-1">
+            <span className="text-gray-500 dark:text-gray-400">Vaso</span>
             <span className="font-medium text-right text-sm break-words max-w-[60%]">
               {glass || "Desconocido"}
             </span>
           </p>
         </div>
         <div>
-          <strong className="text-xs text-gray-400 uppercase tracking-wider mb-2 block">
+          <strong className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 block">
             Ingredientes
           </strong>
           <div className="flex flex-wrap items-center gap-1.5 text-xs w-full">
             {ingredients.slice(0, 4).map((ing, i) => (
               <span
                 key={i}
-                className="bg-gray-700/80 px-2 py-1 rounded text-gray-200 border border-gray-600"
+                className="bg-gray-100 dark:bg-gray-700/80 px-2 py-1 rounded text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600"
               >
                 {ing}
               </span>
             ))}
             {ingredients.length > 4 && (
-              <span className="bg-gray-700/80 px-2 py-1 rounded text-gray-200 border border-gray-600">
+              <span className="bg-gray-100 dark:bg-gray-700/80 px-2 py-1 rounded text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600">
                 +{ingredients.length - 4} más
               </span>
             )}
             {ingredients.length === 0 && (
-              <span className="text-gray-500 italic">No especificados</span>
+              <span className="text-gray-400 dark:text-gray-500 italic">No especificados</span>
             )}
           </div>
         </div>

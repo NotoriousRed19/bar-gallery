@@ -54,31 +54,45 @@ export default function CocktailDetail() {
   const instructionsES = cocktail.strInstructionsES || null;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen h-screen w-full py-12  from-gray-100 via-gray-200 to-gray-300 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
-      <div className="w-full mt-5 max-w-6xl">
-        <ImageItem
-          id={id}
-          src={cocktail.strDrinkThumb}
-          alt={cocktail.strDrink}
-          category={cocktail.strCategory}
-          glass={cocktail.strGlass}
-          ingredients={ingredients}
-          size={640}
-        />
-      </div>
-      <div className="w-full max-w-4xl  bg-white/80 dark:bg-gray-800/80 rounded-xl p-6 shadow-lg">
-        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Instrucciones de preparación</h4>
-        <p className="text-gray-800 dark:text-gray-200 text-lg">
-          {instructionsES ? instructionsES : "No hay instrucciones en español disponibles para este cóctel."}
-        </p>
-      </div>
-      <div className="flex items-center justify-center mt-8">
-        <Link
-          href="/galeria"
-          className="text-white items-center  bg-gray-800 hover:bg-gray-700 border border-gray-600 px-6 py-2 rounded-2xl shadow-md transition-colors duration-200"
-        >
-          Volver a la galería
-        </Link>
+    <div className="flex flex-col items-center min-h-screen w-full py-12 px-4 md:px-8">
+      <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl mt-8">
+        {/* Cocktail Card */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <div className="w-full max-w-sm">
+            <ImageItem
+              id={id}
+              src={cocktail.strDrinkThumb}
+              alt={cocktail.strDrink}
+              category={cocktail.strCategory}
+              glass={cocktail.strGlass}
+              ingredients={ingredients}
+              size={640}
+            />
+          </div>
+        </div>
+
+        {/* Instructions and Actions */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center">
+          <div className="w-full bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg mb-6 border border-gray-200 dark:border-gray-700">
+            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              Instrucciones de preparación
+            </h4>
+            <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              {instructionsES
+                ? instructionsES
+                : cocktail.strInstructions ||
+                  "No hay instrucciones disponibles para este cóctel."}
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-start">
+            <Link
+              href="/galeria"
+              className="text-gray-900  bg-white hover:bg-gray-100 border border-gray-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-600 px-6 py-3 rounded-2xl shadow-md transition-colors duration-200"
+            >
+              Volver a la galería
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
