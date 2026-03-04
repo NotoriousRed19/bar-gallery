@@ -12,19 +12,19 @@ export default function Home() {
       >
         Bienvenido a la Galeria de Cocteles
       </h1>
-      <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-4xl px-4 text-gray-200">
+      <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-4xl px-4 text-theme">
         Explora una colección de cocteles increíbles y descubre nuevas recetas
         para mejorar tu experiencia en la barra
         <br /> Navega por nuestras categorías y encuentra la aplicación perfecta
         para tus necesidades, Salud!
       </p>
       <Link
-        className="text-gray-300 button-bg mt-6 px-5 py-2 rounded-2xl border-2 border-gray-800 w-fit hover-cards button-hover"
+        className="text-gray-200 button-bg mt-6 px-5 py-2 rounded-2xl border-2 border-gray-800 w-fit hover-cards button-hover"
         href="/galeria"
       >
         Ir a la Galería de Cocteles
       </Link>
-      <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-8 text-center max-w-4xl px-4 text-gray-200">
+      <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-8 text-center max-w-4xl px-4 text-theme">
         ¡Sumérgenete en el mundo de los cocteles y encuentra tu próxima mezcla
         favorita!
       </p>

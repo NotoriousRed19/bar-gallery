@@ -22,7 +22,7 @@ export default function GaleriaPage() {
         >
           Galería de Imágenes
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-5xl px-4 text-gray-200 leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center max-w-5xl px-4 text-theme leading-relaxed">
           Explora nuestra selección de cocteles cuidadosamente seleccionados,
           <br /> cada uno con su propia historia y sabor único. Desde los
           clásicos atemporales hasta las creaciones más innovadoras, nuestra

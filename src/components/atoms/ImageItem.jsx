@@ -29,15 +29,21 @@ export default function ImageItem({
         <div className="text-sm mb-3 space-y-1 text-gray-300 flex-1">
           <p className="flex justify-between border-b border-gray-700 pb-1">
             <span className="text-gray-400">Tipo</span>
-            <span className="font-medium text-right text-sm">{category || "Desconocido"}</span>
+            <span className="font-medium text-right text-sm">
+              {category || "Desconocido"}
+            </span>
           </p>
           <p className="flex justify-between border-b border-gray-700 pb-1 pt-1">
             <span className="text-gray-400">Vaso</span>
-            <span className="font-medium text-right text-sm break-words max-w-[60%]">{glass || "Desconocido"}</span>
+            <span className="font-medium text-right text-sm break-words max-w-[60%]">
+              {glass || "Desconocido"}
+            </span>
           </p>
         </div>
         <div>
-          <strong className="text-xs text-gray-400 uppercase tracking-wider mb-2 block">Ingredientes</strong>
+          <strong className="text-xs text-gray-400 uppercase tracking-wider mb-2 block">
+            Ingredientes
+          </strong>
           <div className="flex flex-wrap items-center gap-1.5 text-xs w-full">
             {ingredients.slice(0, 4).map((ing, i) => (
               <span
